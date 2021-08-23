@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.baizhi.dao.VideoVoDao">
+    <select id="queryAll" resultType="cn.baizhi.vo.VideoVo">
+        select video.id,video.title videoTitle,video.cover_path cover,video.video_path path,video.create_date uploadTime,video.brief description,yc.cate_name cateName,yu.headimg userPhoto
+        from yx.yx_video video left join yx.yx_category yc on video.category_id = yc.id
+        left join yx.yx_user yu on video.user_id = yu.id
+        order by video.create_date desc
+    </select>
+
+</mapper>
