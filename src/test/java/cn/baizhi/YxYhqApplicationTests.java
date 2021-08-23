@@ -88,6 +88,7 @@ class YxYhqApplicationTests {
     }
     @Test
     public void test7(){
+        System.out.println("111");
         List<MonthAndCount> list = monthAndCountDao.selectCountBySex("男");
         for (MonthAndCount monthAndCount : list) {
             System.out.println(monthAndCount);
