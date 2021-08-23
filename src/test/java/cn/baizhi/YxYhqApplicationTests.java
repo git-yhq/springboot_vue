@@ -94,4 +94,8 @@ class YxYhqApplicationTests {
             System.out.println(monthAndCount);
         }
     }
+    @Test
+    public void test(){
+        System.out.println("创建新分支");
+    }
 }
